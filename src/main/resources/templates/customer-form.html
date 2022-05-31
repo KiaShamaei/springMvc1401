@@ -1,0 +1,35 @@
+<!DOCTYPE HTML>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>Student form</title>
+
+    <link rel="stylesheet" th:href="@{/css/main.css}"/>
+
+</head>
+
+<body>
+
+
+<main role="main" class="container">
+
+    <div class="starter-template">
+        <h1>Form</h1>
+        <form action="#" th:action="@{/customer/processForm}" th:object="${customer}" method="GET">
+            <input type="text" placeholder="What is your fname?" th:field="*{firstName}">
+            <div class="alert" th:if="${#fields.hasErrors('firstName')}" th:errors="*{firstName}"></div>
+            <br><br>
+            <input type="text" placeholder="What is your lname?" th:field="*{lastName}">
+            <button type="submit">submit</button>
+        </form>
+    </div>
+
+
+</main>
+<!-- /.container -->
+
+<script type="text/javascript" th:src="@{webjars/bootstrap/4.2.1/js/bootstrap.min.js}"></script>
+</body>
+</html>

@@ -21,10 +21,13 @@
         <p th:text="${studentluv.lastName}"></p>
         <p th:text="${studentluv.country}"></p>
         <p th:text="${studentluv.favoritLanguage}"></p>
-        <p th:text="${studentluv.operationSystem}"></p>
+        <div class="list">
+            <ul>
+                <li th:each="item : ${studentluv.operationSystem}" th:text="${item}"></li>
+                <li>...</li>
+            </ul>
+        </div>
     </div>
-
-
 </main>
 <!-- /.container -->
 

@@ -13,3 +13,8 @@ h1{
 h2{
     color:#FF0000;
 }
+.list{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
